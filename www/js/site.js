@@ -53,7 +53,7 @@ function addEmployees(e){
 }
 
 function editEmployee(e){
-    e.preventDefault(e);
+    e.preventDefault();
     let id = parseInt($("#editId").val(), 10);
     let name = $("#editName").val();
     let sname= $("#editSname").val();
@@ -81,7 +81,7 @@ function editEmployee(e){
            document.getElementById("editSname").value  = " ";
            document.getElementById("editPosition").value  = " ";
            document.getElementById("editSalary").value  = " ";
-            
+           $("#allusers").html("");
         },
         error: function ( errorthrown) {
             alert(" conection to the server failed ");
